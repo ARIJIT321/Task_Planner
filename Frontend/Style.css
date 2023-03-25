@@ -1,0 +1,98 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  /* styling form */
+  
+  form {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgb(9, 31, 232);
+    border-radius: 5px;
+  }
+  
+  form label {
+    display: inline-block;
+    width: 7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  form input,form select {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width:200px;
+    border-radius: 5px;
+    border: 1px solid rgb(243, 88, 88);
+  }
+  
+  form button {
+    /* display: block; */
+    margin-left: 47%;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Styling the task section */
+
+  #tasks {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgb(9, 31, 232);
+    border-radius: 5px;
+  }
+  
+  #tasks h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th,td {
+    border: 1px solid rgb(243, 88, 88);
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .status-backlog {
+    background-color: #ff0707;
+  }
+  
+  .status-inprogress {
+    background-color: #007bff;
+  }
+  
+  .status-completed {
+    background-color: #28a745;
+  }
+  

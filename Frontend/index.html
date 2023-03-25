@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Planner</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Task Planner</h1>
+
+    <form id="create-task-form">
+      <label for="title">Title:</label>
+      <input type="text" name="title" required><br>
+
+      <label for="type">Type:</label>
+      <select name="type" required>
+        <option value="bug">Bug</option>
+        <option value="feature">Feature</option>
+        <option value="story">Story</option>
+      </select><br>
+
+      <label for="sprint">Sprint:</label>
+      <select name="sprint" required></select><br>
+
+      <label for="assignee">Assignee:</label>
+      <select name="assignee" required></select><br>
+
+      <label for="status">Status:</label>
+      <select name="status" required>
+        <option value="backlog">Backlog</option>
+        <option value="inprogress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select><br>
+
+      <button type="submit">Create Task</button>
+    </form>
+
+    <div id="tasks">
+      <h2>Tasks</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Sprint</th>
+            <th>Assignee</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+</html>
+<script src="script.js"></script>

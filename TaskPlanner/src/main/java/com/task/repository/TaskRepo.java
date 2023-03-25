@@ -11,6 +11,7 @@ import com.task.model.Task;
 public interface TaskRepo extends JpaRepository<Task, Integer>{
 
 	 List<Task> findBySprintId(Integer sprintId);
+	 
 	 List<Task> findByAssignee(String assignee);
 	
 }

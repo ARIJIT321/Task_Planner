@@ -8,29 +8,34 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.task.exception.SprintException;
 import com.task.exception.TaskException;
-import com.task.model.Sprint;
 import com.task.model.Task;
-import com.task.service.SprintService;
+import com.task.repository.TaskRepo;
 import com.task.service.TaskService;
-import com.task.service.UserService;
 
+@RestController
+@RequestMapping("/task")
 public class TaskController {
 
 	@Autowired
     private TaskService taskService;
 
-    @Autowired
-    private SprintService sprintService;
-
- 
+	@Autowired
+    private TaskRepo taskRepository;
 
 
     @PostMapping("/tasks")
     public Task createTask(@RequestBody Task task) throws TaskException {
         return taskService.createTask(task);
+    }
+    
+    @GetMapping("/tasks")
+    public List<Task> createTask() throws TaskException {
+        return taskRepository.findAll();
     }
 
     @GetMapping("/tasks/sprint/{sprintId}")
@@ -54,15 +59,6 @@ public class TaskController {
     }
 
 
-    @PostMapping("/sprints")
-    public Sprint createSprint(@RequestBody Sprint sprint) throws SprintException {
-        return sprintService.createSprint(sprint);
-    }
-
-    @GetMapping("/sprints")
-    public List<Sprint> getAllSprints() throws SprintException {
-        return sprintService.getAllSprints();
-    }
-
+   
 	
 }
