@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.task.exception.SprintException;
 import com.task.exception.TaskException;
@@ -12,6 +13,7 @@ import com.task.repository.SprintRepo;
 import com.task.repository.TaskRepo;
 import com.task.service.TaskService;
 
+@Service
 public class TaskServiceImpl implements TaskService{
 
 	@Autowired
